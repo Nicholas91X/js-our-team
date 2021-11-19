@@ -31,21 +31,16 @@ for (i = 0; i < arrayEmployees.length; i++) {
 }
 
 // programma per iserire le cards
-let nameUtente = "";
-let role = "";
-let image = "";
-let file = "";
-
 const addMember = document.getElementById("addMemberButton").addEventListener("click", function () {
     getData();
     console.log(arrayEmployees);
 })
 
 function getData() {
-    nameUtente = document.getElementById("name").value;
-    role = document.getElementById("role").value;
-    image = document.getElementById("image").value;
-    file = {nameUtente,role,image};
+    let nameUtente = document.getElementById("name").value;
+    let role = document.getElementById("role").value;
+    let image = document.getElementById("image").value;
+    let file = {nameUtente,role,image};
     arrayEmployees.push(file);
     createCard(file); 
     console.log(file);    
