@@ -27,7 +27,7 @@ const arrayEmployees = [
 ];
 
 for (i = 0; i < arrayEmployees.length; i++) {
-    createTeamCard();
+    createCard(arrayEmployees[i]);
 }
 
 // programma per iserire le cards
@@ -59,14 +59,5 @@ function createCard(file) {
             <div class="card-text">
             <h3>${file.nameUtente}</h3>
             <p>${file.role}</p></div></div>`;
-}
-
-function createTeamCard() {
-    document.querySelector(".team-container").innerHTML += `<div class="team-card">
-    <div class="card-image">
-    <img src="img/${arrayEmployees[i].image}"/></div>
-    <div class="card-text">
-    <h3>${arrayEmployees[i].nameUtente}</h3>
-    <p>${arrayEmployees[i].role}</p></div></div>`;
 }
 
